@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.10.10 on win32)" generated="20240606 09:56:02.291" rpa="false" schemaversion="4">
+<suite id="s1" name="CCMTESTCASE" source="D:\Automation\CCMTESTCASE">
+<suite id="s1-s1" name="2Dscreen" source="D:\Automation\CCMTESTCASE\2Dscreen.robot">
+<test id="s1-s1-t1" name="2D screen unit test case" line="8">
+<kw name="Open the rul and maximize" library="1Dkeyword">
+<arg>http://172.29.58.29:2023/auth/login</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${urls}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240606 09:56:02.488" level="INFO">Opening browser 'chrome' to base url 'http://172.29.58.29:2023/auth/login'.</msg>
+<status status="PASS" starttime="20240606 09:56:02.488" endtime="20240606 09:56:04.916"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240606 09:56:04.916" endtime="20240606 09:56:04.975"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240606 09:56:06.986" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240606 09:56:04.975" endtime="20240606 09:56:06.986"/>
+</kw>
+<status status="PASS" starttime="20240606 09:56:02.488" endtime="20240606 09:56:06.986"/>
+</kw>
+<kw name="Login the user id and password" library="1Dkeyword">
+<arg>qpc</arg>
+<arg>12345678</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//span[text()='Enter your username and password']/following-sibling::input[1]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240606 09:56:06.989" level="INFO">Typing text 'qpc' into text field '//span[text()='Enter your username and password']/following-sibling::input[1]'.</msg>
+<status status="PASS" starttime="20240606 09:56:06.988" endtime="20240606 09:56:07.082"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//span[text()='Enter your username and password']/following-sibling::input[2]</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240606 09:56:07.082" level="INFO">Typing text '12345678' into text field '//span[text()='Enter your username and password']/following-sibling::input[2]'.</msg>
+<status status="PASS" starttime="20240606 09:56:07.082" endtime="20240606 09:56:07.142"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240606 09:56:09.146" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240606 09:56:07.143" endtime="20240606 09:56:09.146"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[contains(text(),'Log')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240606 09:56:09.147" level="INFO">Clicking button '//button[contains(text(),'Log')]'.</msg>
+<status status="PASS" starttime="20240606 09:56:09.146" endtime="20240606 09:56:09.212"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240606 09:56:13.222" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20240606 09:56:09.212" endtime="20240606 09:56:13.223"/>
+</kw>
+<status status="PASS" starttime="20240606 09:56:06.987" endtime="20240606 09:56:13.223"/>
+</kw>
+<kw name="Click on the workbench" library="1Dkeyword">
+<arg>unitworkbench</arg>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>External Concern Management Portal</arg>
+<arg>20s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20240606 09:56:13.224" endtime="20240606 09:56:13.249"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>//div[contains(@class,'active-x')]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20240606 09:56:13.250" level="INFO">Simulating Mouse Over on element '//div[contains(@class,'active-x')]'.</msg>
+<status status="PASS" starttime="20240606 09:56:13.249" endtime="20240606 09:56:13.532"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240606 09:56:15.544" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240606 09:56:13.532" endtime="20240606 09:56:15.544"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//span[contains(text(),'Transaction')]</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240606 09:56:15.544" endtime="20240606 09:56:15.557"/>
+</kw>
+<kw name="Get Selenium Timeout" library="SeleniumLibrary">
+<var>${get}</var>
+<doc>Gets the timeout that is used by various keywords.</doc>
+<msg timestamp="20240606 09:56:15.557" level="INFO">${get} = 5 seconds</msg>
+<status status="PASS" starttime="20240606 09:56:15.557" endtime="20240606 09:56:15.557"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${get}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240606 09:56:15.557" level="INFO">5 seconds</msg>
+<status status="PASS" starttime="20240606 09:56:15.557" endtime="20240606 09:56:15.557"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//span[contains(text(),'Transaction')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240606 09:56:15.558" level="INFO">Clicking element '//span[contains(text(),'Transaction')]'.</msg>
+<status status="PASS" starttime="20240606 09:56:15.557" endtime="20240606 09:56:15.600"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//a[contains(@href,'${init}')]</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240606 09:56:15.600" endtime="20240606 09:56:15.615"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>//a[contains(@href,'${init}')]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20240606 09:56:15.615" level="INFO">Clicking link '//a[contains(@href,'unitworkbench')]'.</msg>
+<status status="PASS" starttime="20240606 09:56:15.615" endtime="20240606 09:56:15.664"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3S</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240606 09:56:18.665" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240606 09:56:15.664" endtime="20240606 09:56:18.665"/>
+</kw>
+<status status="PASS" starttime="20240606 09:56:13.223" endtime="20240606 09:56:18.665"/>
+</kw>
+<kw name="date and time of the list" library="2Dkeyword">
+<var>${datetime}</var>
+<kw name="Dateandtimes" library="timeforthecurrentdate">
+<var>${abc}</var>
+<msg timestamp="20240606 09:56:18.667" level="INFO">${abc} = 6</msg>
+<status status="PASS" starttime="20240606 09:56:18.667" endtime="20240606 09:56:18.667"/>
+</kw>
+<return>
+<value>${abc}</value>
+<status status="PASS" starttime="20240606 09:56:18.667" endtime="20240606 09:56:18.667"/>
+</return>
+<msg timestamp="20240606 09:56:18.668" level="INFO">${datetime} = 6</msg>
+<status status="PASS" starttime="20240606 09:56:18.666" endtime="20240606 09:56:18.668"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${datetime}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240606 09:56:18.668" level="INFO">6</msg>
+<status status="PASS" starttime="20240606 09:56:18.668" endtime="20240606 09:56:18.669"/>
+</kw>
+<kw name="All catagory on" library="1Dkeyword">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//mat-slide-toggle[@mattooltip="Show All Category Data"]/label</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240606 09:56:18.670" level="INFO">Clicking element '//mat-slide-toggle[@mattooltip="Show All Category Data"]/label'.</msg>
+<status status="PASS" starttime="20240606 09:56:18.669" endtime="20240606 09:56:18.743"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240606 09:56:21.759" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240606 09:56:18.743" endtime="20240606 09:56:21.759"/>
+</kw>
+<status status="PASS" starttime="20240606 09:56:18.669" endtime="20240606 09:56:21.759"/>
+</kw>
+<kw name="click on the concern number" library="1Dkeyword">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//thead[@role="rowgroup"]/parent::table/tbody/tr[1]/td[2]/span/span/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240606 09:56:21.761" level="INFO">Clicking element '//thead[@role="rowgroup"]/parent::table/tbody/tr[1]/td[2]/span/span/a'.</msg>
+<status status="PASS" starttime="20240606 09:56:21.760" endtime="20240606 09:56:22.127"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240606 09:56:26.130" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20240606 09:56:22.127" endtime="20240606 09:56:26.130"/>
+</kw>
+<status status="PASS" starttime="20240606 09:56:21.760" endtime="20240606 09:56:26.130"/>
+</kw>
+<kw name="click on the 2D stepper" library="2Dkeyword">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//span[contains(text(),'2 D')]/parent::button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240606 09:56:26.134" level="INFO">Clicking button '//span[contains(text(),'2 D')]/parent::button'.</msg>
+<status status="PASS" starttime="20240606 09:56:26.133" endtime="20240606 09:56:26.210"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240606 09:56:28.220" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240606 09:56:26.210" endtime="20240606 09:56:28.220"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//span[contains(text(),"Customer End Quantity")]/parent::div/following-sibling::div[3]/span/button</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240606 09:56:28.220" endtime="20240606 09:56:28.239"/>
+</kw>
+<status status="PASS" starttime="20240606 09:56:26.131" endtime="20240606 09:56:28.239"/>
+</kw>
+<kw name="input the customer end quantity" library="2Dkeyword">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//span[contains(text(),"Customer End Quantity")]/parent::div/following-sibling::div[3]/span/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240606 09:56:28.241" level="INFO">Clicking element '//span[contains(text(),"Customer End Quantity")]/parent::div/following-sibling::div[3]/span/button'.</msg>
+<status status="PASS" starttime="20240606 09:56:28.240" endtime="20240606 09:56:28.372"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240606 09:56:29.386" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240606 09:56:28.372" endtime="20240606 09:56:29.386"/>
+</kw>
+<status status="PASS" starttime="20240606 09:56:28.239" endtime="20240606 09:56:29.386"/>
+</kw>
+<kw name="Enter the total number of Ok" library="2Dkeyword">
+<arg>45</arg>
+<arg>45</arg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>//div[contains(text(),'Quantity')]/parent::gui-html-view/parent::div/parent::div/parent::div/parent::div/following-sibling::div[1]/div/div/div/div[1]/div[2]</arg>
+<arg>${value1}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240606 09:56:29.389" level="INFO">Sending key(s) ('45',) to //div[contains(text(),'Quantity')]/parent::gui-html-view/parent::div/parent::div/parent::div/parent::div/following-sibling::div[1]/div/div/div/div[1]/div[2] element.</msg>
+<msg timestamp="20240606 09:56:29.698" level="INFO">Sending keys 45</msg>
+<status status="PASS" starttime="20240606 09:56:29.388" endtime="20240606 09:56:29.715"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240606 09:56:30.728" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240606 09:56:29.715" endtime="20240606 09:56:30.728"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>//div[contains(text(),'Quantity')]/parent::gui-html-view/parent::div/parent::div/parent::div/parent::div/following-sibling::div[1]/div/div/div/div[2]/div[2]</arg>
+<arg>${value2}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240606 09:56:30.730" level="INFO">Sending key(s) ('45',) to //div[contains(text(),'Quantity')]/parent::gui-html-view/parent::div/parent::div/parent::div/parent::div/following-sibling::div[1]/div/div/div/div[2]/div[2] element.</msg>
+<msg timestamp="20240606 09:56:31.036" level="INFO">Sending keys 45</msg>
+<status status="PASS" starttime="20240606 09:56:30.728" endtime="20240606 09:56:31.048"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240606 09:56:34.051" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240606 09:56:31.048" endtime="20240606 09:56:34.051"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//span[contains(text(),'Close')]/parent::button/preceding-sibling::button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240606 09:56:34.053" level="INFO">Clicking element '//span[contains(text(),'Close')]/parent::button/preceding-sibling::button'.</msg>
+<status status="PASS" starttime="20240606 09:56:34.051" endtime="20240606 09:56:34.105"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240606 09:56:36.108" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240606 09:56:34.106" endtime="20240606 09:56:36.108"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<var>${val}</var>
+<arg>Stock containment stage quantites updated successfully</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20240606 09:56:36.134" level="INFO">Current page contains text 'Stock containment stage quantites updated successfully'.</msg>
+<msg timestamp="20240606 09:56:36.134" level="INFO">${val} = None</msg>
+<status status="PASS" starttime="20240606 09:56:36.108" endtime="20240606 09:56:36.134"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${val}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240606 09:56:36.134" level="INFO">None</msg>
+<status status="PASS" starttime="20240606 09:56:36.134" endtime="20240606 09:56:36.135"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240606 09:56:37.150" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240606 09:56:36.135" endtime="20240606 09:56:37.150"/>
+</kw>
+<status status="PASS" starttime="20240606 09:56:29.387" endtime="20240606 09:56:37.150"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//span[contains(text(),"Customer End Quantity")]/parent::div/following-sibling::div[8]/span/mat-datepicker-toggle</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240606 09:56:37.152" level="INFO">Clicking element '//span[contains(text(),"Customer End Quantity")]/parent::div/following-sibling::div[8]/span/mat-datepicker-toggle'.</msg>
+<status status="PASS" starttime="20240606 09:56:37.151" endtime="20240606 09:56:37.241"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[text()=' ${datetime} ']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240606 09:56:37.243" level="INFO">Clicking element '//div[text()=' 6 ']'.</msg>
+<status status="PASS" starttime="20240606 09:56:37.243" endtime="20240606 09:56:37.298"/>
+</kw>
+<kw name="input the customer end quantity other column data" library="2Dkeyword">
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240606 09:56:38.305" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240606 09:56:37.299" endtime="20240606 09:56:38.305"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//span[contains(text(),"Customer End Quantity")]/parent::div/following-sibling::div[9]/span/select</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240606 09:56:38.306" level="INFO">Clicking element '//span[contains(text(),"Customer End Quantity")]/parent::div/following-sibling::div[9]/span/select'.</msg>
+<status status="PASS" starttime="20240606 09:56:38.305" endtime="20240606 09:56:38.379"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240606 09:56:40.392" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240606 09:56:38.379" endtime="20240606 09:56:40.392"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//span[contains(text(),"Customer End Quantity")]/parent::div/following-sibling::div[9]/span/select/option[contains(text(),'Completed')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240606 09:56:40.393" level="INFO">Clicking element '//span[contains(text(),"Customer End Quantity")]/parent::div/following-sibling::div[9]/span/select/option[contains(text(),'Completed')]'.</msg>
+<status status="PASS" starttime="20240606 09:56:40.392" endtime="20240606 09:56:40.463"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240606 09:56:41.473" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240606 09:56:40.463" endtime="20240606 09:56:41.473"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//span[contains(text(),"Customer End Quantity")]/parent::div/following-sibling::div[10]/span/textarea</arg>
+<arg>enter the data in the customer quantity</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240606 09:56:41.474" level="INFO">Typing text 'enter the data in the customer quantity' into text field '//span[contains(text(),"Customer End Quantity")]/parent::div/following-sibling::div[10]/span/textarea'.</msg>
+<status status="PASS" starttime="20240606 09:56:41.473" endtime="20240606 09:56:41.620"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240606 09:56:43.623" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240606 09:56:41.620" endtime="20240606 09:56:43.623"/>
+</kw>
+<status status="PASS" starttime="20240606 09:56:37.299" endtime="20240606 09:56:43.623"/>
+</kw>
+<kw name="save the save and lock the customer end quantity data" library="2Dkeyword">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>//span[contains(text(),"Customer End Quantity")]/parent::div/preceding-sibling::div/gui-checkbox</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20240606 09:56:43.625" endtime="20240606 09:56:43.933"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240606 09:56:44.946" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240606 09:56:43.934" endtime="20240606 09:56:44.946"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//span[contains(text(),"Customer End Quantity")]/parent::div/preceding-sibling::div/gui-checkbox</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240606 09:56:44.948" level="INFO">Clicking element '//span[contains(text(),"Customer End Quantity")]/parent::div/preceding-sibling::div/gui-checkbox'.</msg>
+<status status="PASS" starttime="20240606 09:56:44.946" endtime="20240606 09:56:45.014"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240606 09:56:46.022" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240606 09:56:45.014" endtime="20240606 09:56:46.022"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>//mat-card/button/span[contains(text(),'Save')]/parent::button</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20240606 09:56:46.022" endtime="20240606 09:56:46.332"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240606 09:56:47.342" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240606 09:56:46.333" endtime="20240606 09:56:47.342"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//mat-card/button/span[contains(text(),'Save')]/parent::button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240606 09:56:47.343" level="INFO">Clicking element '//mat-card/button/span[contains(text(),'Save')]/parent::button'.</msg>
+<status status="PASS" starttime="20240606 09:56:47.342" endtime="20240606 09:56:47.400"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240606 09:56:48.409" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240606 09:56:47.400" endtime="20240606 09:56:48.409"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>StockContainment records updated successfully</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20240606 09:56:48.441" level="INFO">Current page contains text 'StockContainment records updated successfully'.</msg>
+<status status="PASS" starttime="20240606 09:56:48.409" endtime="20240606 09:56:48.441"/>
+</kw>
+<status status="PASS" starttime="20240606 09:56:43.624" endtime="20240606 09:56:48.441"/>
+</kw>
+<kw name="input the Customer's Other Locations" library="2Dkeyword">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//span[contains(text(),"Customer's Other Locations")]/parent::div/following-sibling::div[3]/span/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240606 09:56:48.442" level="INFO">Clicking element '//span[contains(text(),"Customer's Other Locations")]/parent::div/following-sibling::div[3]/span/button'.</msg>
+<status status="PASS" starttime="20240606 09:56:48.442" endtime="20240606 09:56:48.917"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240606 09:56:50.920" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240606 09:56:48.918" endtime="20240606 09:56:50.920"/>
+</kw>
+<status status="PASS" starttime="20240606 09:56:48.442" endtime="20240606 09:56:50.920"/>
+</kw>
+<kw name="Enter the total number of Ok" library="2Dkeyword">
+<arg>45</arg>
+<arg>11</arg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>//div[contains(text(),'Quantity')]/parent::gui-html-view/parent::div/parent::div/parent::div/parent::div/following-sibling::div[1]/div/div/div/div[1]/div[2]</arg>
+<arg>${value1}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240606 09:56:50.922" level="INFO">Sending key(s) ('45',) to //div[contains(text(),'Quantity')]/parent::gui-html-view/parent::div/parent::div/parent::div/parent::div/following-sibling::div[1]/div/div/div/div[1]/div[2] element.</msg>
+<msg timestamp="20240606 09:56:51.227" level="INFO">Sending keys 45</msg>
+<status status="PASS" starttime="20240606 09:56:50.921" endtime="20240606 09:56:51.244"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240606 09:56:52.247" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240606 09:56:51.244" endtime="20240606 09:56:52.247"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>//div[contains(text(),'Quantity')]/parent::gui-html-view/parent::div/parent::div/parent::div/parent::div/following-sibling::div[1]/div/div/div/div[2]/div[2]</arg>
+<arg>${value2}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240606 09:56:52.249" level="INFO">Sending key(s) ('11',) to //div[contains(text(),'Quantity')]/parent::gui-html-view/parent::div/parent::div/parent::div/parent::div/following-sibling::div[1]/div/div/div/div[2]/div[2] element.</msg>
+<msg timestamp="20240606 09:56:52.558" level="INFO">Sending keys 11</msg>
+<status status="PASS" starttime="20240606 09:56:52.247" endtime="20240606 09:56:52.572"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240606 09:56:55.581" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240606 09:56:52.573" endtime="20240606 09:56:55.581"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//span[contains(text(),'Close')]/parent::button/preceding-sibling::button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240606 09:56:55.582" level="INFO">Clicking element '//span[contains(text(),'Close')]/parent::button/preceding-sibling::button'.</msg>
+<status status="PASS" starttime="20240606 09:56:55.581" endtime="20240606 09:56:55.632"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240606 09:56:57.642" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240606 09:56:55.632" endtime="20240606 09:56:57.642"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<var>${val}</var>
+<arg>Stock containment stage quantites updated successfully</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20240606 09:56:57.671" level="INFO">Current page contains text 'Stock containment stage quantites updated successfully'.</msg>
+<msg timestamp="20240606 09:56:57.671" level="INFO">${val} = None</msg>
+<status status="PASS" starttime="20240606 09:56:57.642" endtime="20240606 09:56:57.671"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${val}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240606 09:56:57.672" level="INFO">None</msg>
+<status status="PASS" starttime="20240606 09:56:57.671" endtime="20240606 09:56:57.672"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240606 09:56:58.672" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240606 09:56:57.672" endtime="20240606 09:56:58.672"/>
+</kw>
+<status status="PASS" starttime="20240606 09:56:50.920" endtime="20240606 09:56:58.672"/>
+</kw>
+<kw name="input in Customer's Other Locations data" library="2Dkeyword">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>//span[contains(text(),'View Unlock History')]/parent::button</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20240606 09:56:58.673" endtime="20240606 09:56:58.970"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240606 09:56:59.981" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240606 09:56:58.971" endtime="20240606 09:56:59.981"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//span[contains(text(),"Customer's Other Locations")]/parent::div/following-sibling::div[8]/span/mat-datepicker-toggle</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240606 09:56:59.983" level="INFO">Clicking element '//span[contains(text(),"Customer's Other Locations")]/parent::div/following-sibling::div[8]/span/mat-datepicker-toggle'.</msg>
+<status status="PASS" starttime="20240606 09:56:59.981" endtime="20240606 09:57:00.043"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240606 09:57:01.058" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240606 09:57:00.043" endtime="20240606 09:57:01.058"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240606 09:57:02.060" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240606 09:57:01.058" endtime="20240606 09:57:02.060"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//span[contains(text(),"Customer's Other Locations")]/parent::div/following-sibling::div[9]/span/select</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240606 09:57:02.062" level="INFO">Clicking element '//span[contains(text(),"Customer's Other Locations")]/parent::div/following-sibling::div[9]/span/select'.</msg>
+<msg timestamp="20240606 09:57:03.263" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240606 09:57:03.263" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;select _ngcontent-han-c427="" class="ng-star-inserted"&gt;...&lt;/select&gt; is not clickable at point (1137, 205). Other element would receive the click: &lt;div class="cdk-overlay-backdrop mat-overlay-transparent-backdrop mat-datepicker-57-backdrop cdk-overlay-backdrop-showing"&gt;&lt;/div&gt;
+  (Session info: chrome=125.0.6422.78)
+Stacktrace:
+	GetHandleVerifier [0x00007FF69CCA1F52+60322]
+	(No symbol) [0x00007FF69CC1CEC9]
+	(No symbol) [0x00007FF69CAD7EBA]
+	(No symbol) [0x00007FF69CB2F32E]
+	(No symbol) [0x00007FF69CB2CCF2]
+	(No symbol) [0x00007FF69CB2A18B]
+	(No symbol) [0x00007FF69CB29356]
+	(No symbol) [0x00007FF69CB1B491]
+	(No symbol) [0x00007FF69CB4C21A]
+	(No symbol) [0x00007FF69CB1ADB6]
+	(No symbol) [0x00007FF69CB4C430]
+	(No symbol) [0x00007FF69CB6BC80]
+	(No symbol) [0x00007FF69CB4BFC3]
+	(No symbol) [0x00007FF69CB19617]
+	(No symbol) [0x00007FF69CB1A211]
+	GetHandleVerifier [0x00007FF69CFB94AD+3301629]
+	GetHandleVerifier [0x00007FF69D0036D3+3605283]
+	GetHandleVerifier [0x00007FF69CFF9450+3563680]
+	GetHandleVerifier [0x00007FF69CD54326+790390]
+	(No symbol) [0x00007FF69CC2750F]
+	(No symbol) [0x00007FF69CC23404]
+	(No symbol) [0x00007FF69CC23592]
+	(No symbol) [0x00007FF69CC12F9F]
+	BaseThreadInitThunk [0x00007FFF94DE7344+20]
+	RtlUserThreadStart [0x00007FFF964026B1+33]
+</msg>
+<status status="FAIL" starttime="20240606 09:57:02.061" endtime="20240606 09:57:03.268"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240606 09:57:03.268" endtime="20240606 09:57:03.268"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//span[contains(text(),"Customer's Other Locations")]/parent::div/following-sibling::div[9]/span/select/option[contains(text(),'Completed')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240606 09:57:03.269" endtime="20240606 09:57:03.269"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240606 09:57:03.269" endtime="20240606 09:57:03.269"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//span[contains(text(),"Customer's Other Locations")]/parent::div/following-sibling::div[10]/span/textarea</arg>
+<arg>enter the data in the customer quantity</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240606 09:57:03.269" endtime="20240606 09:57:03.269"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240606 09:57:03.269" endtime="20240606 09:57:03.269"/>
+</kw>
+<status status="FAIL" starttime="20240606 09:56:58.673" endtime="20240606 09:57:03.270"/>
+</kw>
+<kw name="Input the material in transist" library="2Dkeyword">
+<status status="NOT RUN" starttime="20240606 09:57:03.271" endtime="20240606 09:57:03.271"/>
+</kw>
+<kw name="Enter the total number of Ok" library="2Dkeyword">
+<arg>21</arg>
+<arg>11</arg>
+<status status="NOT RUN" starttime="20240606 09:57:03.271" endtime="20240606 09:57:03.271"/>
+</kw>
+<kw name="input in the the material in transist" library="2Dkeyword">
+<status status="NOT RUN" starttime="20240606 09:57:03.272" endtime="20240606 09:57:03.272"/>
+</kw>
+<tag>twod</tag>
+<status status="FAIL" starttime="20240606 09:56:02.487" endtime="20240606 09:57:03.272">ElementClickInterceptedException: Message: element click intercepted: Element &lt;select _ngcontent-han-c427="" class="ng-star-inserted"&gt;...&lt;/select&gt; is not clickable at point (1137, 205). Other element would receive the click: &lt;div class="cdk-overlay-backdrop mat-overlay-transparent-backdrop mat-datepicker-57-backdrop cdk-overlay-backdrop-showing"&gt;&lt;/div&gt;
+  (Session info: chrome=125.0.6422.78)
+Stacktrace:
+	GetHandleVerifier [0x00007FF69CCA1F52+60322]
+	(No symbol) [0x00007FF69CC1CEC9]
+	(No symbol) [0x00007FF69CAD7EBA]
+	(No symbol) [0x00007FF69CB2F32E]
+	(No symbol) [0x00007FF69CB2CCF2]
+	(No symbol) [0x00007FF69CB2A18B]
+	(No symbol) [0x00007FF69CB29356]
+	(No symbol) [0x00007FF69CB1B491]
+	(No symbol) [0x00007FF69CB4C21A]
+	(No symbol) [0x00007FF69CB1ADB6]
+	(No symbol) [0x00007FF69CB4C430]
+	(No symbol) [0x00007FF69CB6BC80]
+	(No symbol) [0x00007FF69CB4BFC3]
+	(No symbol) [0x00007FF69CB19617]
+	(No symbol) [0x00007FF69CB1A211]
+	GetHandleVerifier [0x00007FF69CFB94AD+3301629]
+	GetHandleVerifier [0x00007FF69D0036D3+3605283]
+	GetHandleVerifier [0x00007FF69CFF9450+3563680]
+	GetHandleVerifier [0x00007FF69CD54326+790390]
+	(No symbol) [0x00007FF69CC2750F]
+	(No symbol) [0x00007FF69CC23404]
+	(No symbol) [0x00007FF69CC23592]
+	(No symbol) [0x00007FF69CC12F9F]
+	BaseThreadInitThunk [0x00007FFF94DE7344+20]
+	RtlUserThreadStart [0x00007FFF964026B1+33]
+</status>
+</test>
+<status status="FAIL" starttime="20240606 09:56:02.309" endtime="20240606 09:57:03.278"/>
+</suite>
+<status status="FAIL" starttime="20240606 09:56:02.293" endtime="20240606 09:57:03.280"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">twod</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="CCMTESTCASE">CCMTESTCASE</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="2Dscreen">CCMTESTCASE.2Dscreen</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
